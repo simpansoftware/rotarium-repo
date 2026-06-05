@@ -6,4 +6,4 @@ r = requests.get("https://github.com/fastfetch-cli/fastfetch/releases/download/2
 with zipfile.ZipFile(io.BytesIO(r.content)) as z:
     z.extractall("packages/linux/fastfetch")
 
-register_package("fastfetch", "packages/linux/fastfetch/usr/bin/fastfetch")
+register_package("fastfetch", "packages/linux/fastfetch/usr/bin/fastfetch", "packages/linux/fastfetch")
