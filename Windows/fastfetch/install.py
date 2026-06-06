@@ -1,7 +1,7 @@
 import zipfile
 import io
 
-r = requests.get("https://simpansoftware.cc/rotarium-repo/Windows/fastfetch-windows-amd64.zip")
+r = requests.get("https://simpansoftware.cc/rotarium-repo/Windows/fastfetch/fastfetch-windows-amd64.zip")
 
 with zipfile.ZipFile(io.BytesIO(r.content)) as z:
     z.extractall("packages/windows/fastfetch")
